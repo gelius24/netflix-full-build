@@ -78,18 +78,28 @@ function PlansScreen() {
 
   return (
     <div className="plansScreen">
-        <br />
-        {subscription && <p>Renewal date: {' '}{new Date(subscription?.current_period_end * 1000).toLocaleDateString()}</p>}
+      <br />
+      {subscription && (
+        <p>
+          Renewal date:{" "}
+          {new Date(
+            subscription?.current_period_end * 1000
+          ).toLocaleDateString()}
+        </p>
+      )}
       {Object.entries(products).map(([productId, productData]) => {
         //TODO: look for user subscribtion
         const isCurrentPackage = productData.name
-        ?.toLowerCase()
-        .includes(subscription?.role);
+          ?.toLowerCase()
+          .includes(subscription?.role);
 
         return (
-          <div key={productId} className={
-              `${isCurrentPackage && 'plansScreen__plan--disabled'} plansScreen__plan`
-          }>
+          <div
+            key={productId}
+            className={`${
+              isCurrentPackage && "plansScreen__plan--disabled"
+            } plansScreen__plan`}
+          >
             <div className="planScreen__info">
               <h5>{productData.name}</h5>
               <h6>{productData.description}</h6>
@@ -97,7 +107,9 @@ function PlansScreen() {
             <button
               className={subscription && `noSub`}
               onClick={() =>
-                !isCurrentPackage && !subscription && loadCheckout(productData?.prices?.priceId)
+                !isCurrentPackage &&
+                !subscription &&
+                loadCheckout(productData?.prices?.priceId)
               }
             >
               {isCurrentPackage ? "Current Package" : "Subscribe"}

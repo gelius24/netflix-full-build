@@ -20,6 +20,7 @@ function ProfileScreen() {
           />
           <div className="profileScreen__details">
             <h2>{user.email}</h2>
+            </div>
             <div className="profileScreen__plans">
                 <h3>Plans</h3>
                 <PlansScreen />
@@ -30,7 +31,7 @@ function ProfileScreen() {
                 Sign Out
               </button>
             </div>
-          </div>
+         
         </div>
       </div>
     </div>

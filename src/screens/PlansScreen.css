@@ -1,13 +1,22 @@
+.plansScreen{
+    /* background-color: blue; */
+    display: block;
+    width: 100%;
+    margin-right: 200px;
+    text-align: center;
+}
 .plansScreen__plan {
     display: flex;
     justify-content: space-between;
     padding: 20px;
     opacity: 0.8;
+    /* background-color: green; */
 }
 .plansScreen__plan:hover{
     opacity: 1;
 }
 .plansScreen__plan button{
+    all: unset;
     padding: 10px 20px;
     background-color: #e50914;
     color: #fff;
@@ -22,8 +31,3 @@ button.noSub{
     cursor: not-allowed;
 }
 
-@media screen and (max-width: 600px) {
-    .plansScreen__plan{
-        display: block;
-    }
-}
