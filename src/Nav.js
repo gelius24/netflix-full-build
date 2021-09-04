@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import "./Nav.css";
+import logo from "./netflix-logo.png"
+import avatar from "./netflix-avatar.png"
 
 function Nav() {
     const [show, handleShow] = useState(false);
@@ -25,14 +27,14 @@ function Nav() {
         <img
           onClick={() => history.push('/')}
           className="nav__logo"
-          src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c529.png"
-          alt=""
+          src={logo}
+          alt="netflix logo"
         />
         <img
         onClick={() => history.push('profile')}
           className="nav__avatar"
-          src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"
-          alt=""
+          src={avatar}
+          alt="user's avatar"
         />
       </div>
 
