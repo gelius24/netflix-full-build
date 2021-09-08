@@ -48,7 +48,7 @@ function PlansScreen() {
       });
   }, []);
   console.log(products);
-  console.log(subscription);
+  console.log('La variable subscription est >>',subscription);
 
   const loadCheckout = async (priceId) => {
     const docRef = await db
