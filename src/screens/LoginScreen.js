@@ -6,6 +6,7 @@ function LoginScreen() {
   const [signIn, setSignIn] = useState(false);
 
   return (
+    <div className="container__loginscreen">
     <div className="loginScreen">
       <div className="loginScreen__background">
         <div className="loginScreen__header">
@@ -47,6 +48,38 @@ function LoginScreen() {
           </>
         )}
       </div>
+    </div>
+    <section>
+      <div className="sec">
+        <div className="txt">
+          <h3>Visionnez sur votre téléviseur.</h3>
+          <p>Compatible avec les téléviseurs connectés, Playstation, Xbox, Chromecast, Apple TV, lecteurs Blu-ray et bien plus encore.</p>
+        </div>
+        <div className="tv">
+          <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png" alt="" />
+          <video src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-0819.m4v" autoPlay playsInline muted loop type="video/mp4"></video>
+        </div>
+      </div>
+      <div className="sec">
+        <div className="st-box">
+          <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile-0819.jpg" alt="" />
+          <div className="animation-box">
+            <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/boxshot.png" alt="" />
+            <div style={{display: 'flex', flexDirection: 'column'}}>
+            <p style={{color: 'white'}}>Stranger Things</p>
+            <p style={{color: '#0071eb'}}>Téléchargement en cours...</p>
+            </div>
+            <div className='anim'></div>
+          </div>
+        </div>
+        <div className="txt">
+          <h3>Téléchargez vos séries télé pour les visionner hors ligne.</h3>
+          <p>Enregistrez vos favoris facilement et ayez toujours quelque chose à visionner.</p>
+        </div>
+      </div>
+      <div></div>
+      <div></div>
+    </section>
     </div>
   );
 }
